@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  font-family: 'Kanit', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+.homepage-process{
+	padding: 45px 0px;
+}
+.homepage-process .homepage-process-title h2,
+.homepage-question .homepage-question-title h2{
+    color: #3591cf;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 36px;
+}
+.homepage-process .homepage-process-box-list-right:after {
+    content: url(../../img/arrow-r.png);
+    position: absolute;
+    right: -42px;
+    top: 70px;
+    width:87px; 
+    height:57px; 
+    clear: both;
+}
+.homepage-process .homepage-process-box-list-right:last-child:after {
+  content: none;
+}
+.homepage-process .homepage-process-box-list-left:after{
+	content: url(../../img/arrow-l.png);
+    position: absolute;
+    top: 70px;
+    width:87px; 
+    height:57px; 
+    clear: both;
+}
+.homepage-process .homepage-process-box-list-left:nth-child(2):after {
+    right: -40px;
+}
+.homepage-process .homepage-process-box-list-left:nth-child(3):after {
+    right: -48px;
+}
+.homepage-process .homepage-process-box-list-left:last-child:after {
+  	content: none;
+}
+.homepage-process .homepage-process-box-list-down img{
+   	position: relative;
+    top: -15px;
+}
+.homepage-process .homepage-process-box-list-right .homepage-process-box-list-text,
+.homepage-process .homepage-process-box-list-left .homepage-process-box-list-text{
+    font-size: 18px; 
+    font-weight: 300;
+    padding: 10px 0px;
+}
+
+.homepage-seo .homepage-seo-box-img{
+	text-align: center;
+}
+.homepage-seo .homepage-seo-box-img img{
+	width: 100%;
+}
+
+.homepage-seo .homepage-seo-box-text{
+	padding: 17px 22px;
+    background: #7fd1f7;
+    border-radius: 5px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.homepage-question{
+	background: #f7f7f7;
+	padding: 40px 0px;
+}
+.homepage-question .accordion{
+	padding: 20px 0px;
+}
+.homepage-question .accordion .card{
+    box-shadow: none; 
+    margin-bottom: 0; 
+    background: transparent;
+}
+.homepage-question .accordion .card h4{
+	color: #3591cf;
+}
+
+.homepage-question .accordion .card h4 i{
+	float: right;
+    font-size: 50px;
+}
+
+.homepage-video{
+	padding: 60px 0px;
+}
+.homepage-video .homepage-video-box{
+	padding-bottom: 40px;
+}
