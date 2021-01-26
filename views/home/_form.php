@@ -63,7 +63,7 @@ $form = ActiveForm::begin([
           <?= $form->field($FormContact, 'utm_source')->textInput(['type' => 'hidden','id'=>'utm_source'])?>
           <?= $form->field($FormContact, 'utm_source')->textInput(['type' => 'hidden','id'=>'utm_source'])?>
           <?= $form->field($FormContact, 'utm_campaign')->textInput(['type' => 'hidden','id'=>'utm_campaign'])?>
-          <?= Html::Button(Yii::t('app', 'ส่งเพื่อขอรายละเอียดเพิ่มเติม'), ['class' => 'btn btn-primary btn-sm submit-contact']) ?>
+          <?= Html::submitButton(Yii::t('app', 'ส่งเพื่อขอรายละเอียดเพิ่มเติม'), ['class' => 'btn btn-primary btn-sm submit-contact']) ?>
         </div>
       </div>
     </div>
