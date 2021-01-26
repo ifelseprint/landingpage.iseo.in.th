@@ -6,7 +6,7 @@ use yii\helpers\Url;
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-center">
-				<img src="<?php echo Url::base(true); ?>/img/line_add_icon.png">
+				<a target="_blank" href="https://lin.ee/gFEjQ63"><img src="<?php echo Url::base(true); ?>/img/line_add_icon.png"></a>
 			</div>
 		</div>
 	</div>
@@ -123,7 +123,7 @@ use yii\helpers\Url;
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-center">
-				<img src="<?php echo Url::base(true); ?>/img/line_add_icon.png">
+				<a target="_blank" href="https://lin.ee/gFEjQ63"><img src="<?php echo Url::base(true); ?>/img/line_add_icon.png"></a>
 			</div>
 		</div>
 	</div>
