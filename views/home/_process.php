@@ -57,13 +57,13 @@ use yii\helpers\Url;
 						<div class="col-md-3"></div>
 						<div class="col-md-3"></div>
 						<div class="col-md-3"></div>
-						<div class="col-md-3 homepage-process-box-list-down"><img src="<?php echo Url::base(true); ?>/img/arrow-d.png"></div>
+						<div class="col-md-3 desktop homepage-process-box-list-down"><img src="<?php echo Url::base(true); ?>/img/arrow-d.png"></div>
 					</div>
 				</div>
 				<div style="padding: 10px 0px;" class="text-center">
 					<div class="row">
-						<div class="col-md-3 "></div>
-						<div class="col-md-3 homepage-process-box-list-left">
+						<div class="col-md-3 desktop"></div>
+						<div class="col-md-3 desktop homepage-process-box-list-left">
 							<div class="homepage-process-box-list-icon">
 								<img src="<?php echo Url::base(true); ?>/img/icon_25.png">
 							</div>
@@ -71,7 +71,7 @@ use yii\helpers\Url;
 								<p>รักษาอันดับจามสัญญา</p>
 							</div>
 						</div>
-						<div class="col-md-3 homepage-process-box-list-left">
+						<div class="col-md-3 desktop homepage-process-box-list-left">
 							<div class="homepage-process-box-list-icon">
 								<img src="<?php echo Url::base(true); ?>/img/icon_23.png">
 							</div>
@@ -79,12 +79,40 @@ use yii\helpers\Url;
 								<p>คีย์เวิร์ดติดอันดับตามตกลง</p>
 							</div>
 						</div>
-						<div class="col-md-3 homepage-process-box-list-left">
+						<div class="col-md-3 desktop homepage-process-box-list-left">
 							<div class="homepage-process-box-list-icon">
 								<img src="<?php echo Url::base(true); ?>/img/icon_21.png">
 							</div>
 							<div class="homepage-process-box-list-text">
 								<p>งานเริ่มต้น ตาม Timeline ที่กำหนด พร้อมรีพอร์ตรายเดือน</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mobile">
+						<div class="col-md-3 mobile homepage-process-box-list-left"></div>
+						<div class="col-md-3 mobile homepage-process-box-list-left">
+							<div class="homepage-process-box-list-icon">
+								<img src="<?php echo Url::base(true); ?>/img/icon_21.png">
+							</div>
+							<div class="homepage-process-box-list-text">
+								<p>งานเริ่มต้น ตาม Timeline ที่กำหนด พร้อมรีพอร์ตรายเดือน</p>
+							</div>
+						</div>
+						<div class="col-md-3 mobile homepage-process-box-list-left">
+							<div class="homepage-process-box-list-icon">
+								<img src="<?php echo Url::base(true); ?>/img/icon_23.png">
+							</div>
+							<div class="homepage-process-box-list-text">
+								<p>คีย์เวิร์ดติดอันดับตามตกลง</p>
+							</div>
+						</div>
+						<div class="col-md-3 mobile homepage-process-box-list-left">
+							<div class="homepage-process-box-list-icon">
+								<img src="<?php echo Url::base(true); ?>/img/icon_25.png">
+							</div>
+							<div class="homepage-process-box-list-text">
+								<p>รักษาอันดับจามสัญญา</p>
 							</div>
 						</div>
 					</div>

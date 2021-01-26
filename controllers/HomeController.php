@@ -3,68 +3,96 @@ namespace app\controllers;
 use yii;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
-use app\models\Register;
+use app\models\FormContact;
+use app\models\TblSettingEmail;
 class HomeController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-    	// $getUTM = Yii::$app->CoreFunctions->getUTM();
-    	// $Register = new Register;
-    	// $Register->UTM_SOURCE = $getUTM->utm_source;
-     	// $Register->UTM_MEDIUM = $getUTM->utm_medium;
-     	// $Register->UTM_CAMPAIGN = $getUTM->utm_campaign;
+
+    	$getUTM = Yii::$app->CoreFunctions->getUTM();
+    	$FormContact = new FormContact;
+    	$FormContact->utm_source = $getUTM->utm_source;
+     	$FormContact->utm_medium = $getUTM->utm_medium;
+     	$FormContact->utm_campaign = $getUTM->utm_campaign;
+
+        if(Yii::$app->request->isPost){
+
+            $post = Yii::$app->request->post();
+            
+            if ($FormContact->load($post)){
+
+                if ($FormContact->save()) {
+
+                    $settingEmail = TblSettingEmail::findOne(['ID' => 1]);
+                    $this->sendmail($FormContact,$settingEmail);
+                    $this->sendmailReply($FormContact,$settingEmail);
+
+$token = 'lQXQikNfXr9xus4tpG2D3F98wXV6qGkdz8AIt4EUD1f';
+$str = "
+# Landingpage
+-------------------------
+เว็บไซต์: " . $FormContact->_website . "
+ชื่อ-นามสกุล: " . $FormContact->_fname." ".$FormContact->_lname . "
+อีเมล: " . $FormContact->_email . " 
+เบอร์โทรศัพท์: " . $FormContact->_tel . "
+รายละเอียดเพิ่มเติม: " . $FormContact->_detail . "
+-------------------------
+utm_source: " . $FormContact->utm_source . "
+utm_campaign: " . $FormContact->utm_campaign . "
+utm_medium: " . $FormContact->utm_medium. "
+-------------------------
+";
+$res = Yii::$app->LineNotify->notify_message($str, $token);
+
+                    return json_encode([
+                        "status" => true,
+                        "response" => '<div class="text-center"><h5><b>ท่านได้ทำการส่งข้อมูลมายังเราเรียบร้อยแล้ว</b></h5><div style="font-size:16px;">เจ้าหน้าที่จะทำการติดต่อกลับโดยเร็วที่สุด</div></div>'
+                    ]);
+                }else{
+                    return json_encode([
+                        "status" => false,
+                        "response" => $FormContact->getErrors()
+                    ]);
+                }
+            }else{
+                return json_encode([
+                    "status" => false,
+                    "response" => $FormContact->getErrors()
+                ]);
+            }
+        }
         return $this->render('index', [
-            // 'Register' => $Register
+            'FormContact' => $FormContact
     	]);
     }
 
-    // public function actionRegister()
-    // {
+    public function sendmail($FormContact=null,$settingEmail=null)
+    {
 
-    // 	$Register = new Register;
-    // 	if(Yii::$app->request->isPost){
+        $mail = Yii::$app->mailer->compose('layouts/contact',[
+            'FormContact'    => $FormContact,
+            'settingEmail'      => $settingEmail
+        ]);
+        $mail->setFrom('noreply.iseo@gmail.com');
+        $explodeEmail = explode(",", $settingEmail->_email);
+        $mail->setTo($explodeEmail);
+        $mail->setSubject('Landingpage - Website iseo.in.th');
 
-    //         $post = Yii::$app->request->post();
-            
-    //         if ($Register->load($post)){
+        $mail->send();
+        return $mail;
+    }
+    public function sendmailReply($FormContact=null,$settingEmail=null)
+    {
+        $mail = Yii::$app->mailer->compose('layouts/contact_reply',[
+            'FormContact'    => $FormContact,
+            'settingEmail'   => $settingEmail
+        ]);
+        $mail->setFrom('noreply.iseo@gmail.com');
+        $mail->setTo($FormContact->_email);
+        $mail->setSubject('Landingpage - Website iseo.in.th');
 
-    //         	$postFirstname = $post['Register']['FIRSTNAME'];
-    //         	$postLastname = $post['Register']['LASTNAME'];
-    //         	$postModel = $post['Register']['SELECT_1'];
-    //         	$postSerialNumber = $post['Register']['QUESTION_1'];
-
-		  //       $Register->CREATED_DATETIME = new \yii\db\Expression('NOW()');
-		  //       $Register->CREATED_AT = 'user-event';
-
-		  //       // IP Address
-		  //       $Register->IP = Yii::$app->CoreFunctions->getIP();
-
-		  //       if(!empty($SerialNumber)){
-
-	   //          	if ($Register->save()) {
-
-	   //                  return json_encode([
-	   //                      "status" => true,
-	   //                      "response" => '<div class="text-center"><h5><b>ท่านได้ทำการลงทะเบียนผู้ใช้และรับสิทธิ์เรียบร้อยแล้ว</b></h5>เจ้าหน้าที่จะทำการติดต่อกลับเพื่อยืนยันสิทธิ์<br/>และนัดหมายให้บริการอีกครั้ง หลังจากสิ้นสุดระยะเวลาการลงทะเบียน</div>'
-	   //                  ]);
-	   //              }else{
-	   //                  return json_encode([
-	   //                      "status" => false,
-	   //                      "response" => $Register->getErrors()
-	   //                  ]);
-	   //              }
-	   //          }else{
-	   //          	return json_encode([
-    //                     "status" => false,
-    //                     "response" => '<div class="text-center" style="color: #f00;"><h5><b>ลงทะเบียนไม่สำเร็จ</b></h5>หมายเลขซีเรียลไม่ถูกต้องหรือถูกใช้ไปแล้ว</div>'
-    //                 ]);
-	   //          }
-    //        	}else{
-    //        		return json_encode([
-    //        			"status" => false,
-    //        			"response" => $Register->getErrors()
-    //        		]);
-    //        	}
-    //     }
-    // }
+        $mail->send();
+        return $mail;
+    }
 }

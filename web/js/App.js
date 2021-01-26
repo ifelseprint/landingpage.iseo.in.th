@@ -113,6 +113,6 @@
 	// DEFINE NAMESPACE
 	// =========================================================================
 
-	window.appLG = window.appLG || {};
-	window.appLG.App = new App;
+	window.appWeb = window.appWeb || {};
+	window.appWeb.App = new App;
 }(jQuery)); // pass in (jQuery):

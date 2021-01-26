@@ -5,7 +5,7 @@ body {
   letter-spacing: 0.5px;
 }
 .homepage-process{
-	padding: 45px 0px;
+	padding: 45px 10px;
 }
 .homepage-process .homepage-process-title h2,
 .homepage-question .homepage-question-title h2{
@@ -54,6 +54,12 @@ body {
     font-weight: 300;
     padding: 10px 0px;
 }
+@media only screen and (max-width: 768px) {
+    .homepage-process .homepage-process-box-list-right:after,
+    .homepage-process .homepage-process-box-list-left:after {
+        content: none;
+    }
+}
 
 .homepage-seo .homepage-seo-box-img{
 	text-align: center;
@@ -84,7 +90,8 @@ body {
     margin-bottom: 0; 
     background: transparent;
 }
-.homepage-question .accordion .card h4{
+.homepage-question .accordion .card h4,
+.homepage-question .accordion .card h5{
 	color: #3591cf;
 }
 
@@ -93,9 +100,44 @@ body {
     font-size: 50px;
 }
 
+.homepage-question .accordion .card .card-body{
+    padding: 20px 40px 20px 78px;
+}
+.homepage-question .accordion .card .card-body .content{
+    padding: 7px 0px 7px 30px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
 .homepage-video{
-	padding: 60px 0px;
+	padding: 40px 10px;
 }
 .homepage-video .homepage-video-box{
 	padding-bottom: 40px;
+}
+
+.homepage-contact{
+    padding: 40px 0px;
+    background: #8accf3;
+}
+.homepage-contact .homepage-contact-title h2{
+    color: #2d4867;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    font-size: 36px;
+}
+.homepage-contact .homepage-contact-form{
+    padding: 15px 0px;
+}
+.homepage-contact .homepage-contact-form label{
+    font-size: 16px;
+    font-weight: 300 !important;
+}
+.homepage-contact .homepage-contact-form button{
+    background: #2d4867;
+    padding: 15px 40px;
+    margin: auto;
+    margin-top: 15px;
 }

@@ -11,7 +11,7 @@ use yii\helpers\Url;
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-center" style="padding: 60px 0px;">
-				<img src="<?php echo Url::base(true); ?>/img/icon_iseo_31.png">
+				<img src="<?php echo Url::base(true); ?>/img/icon_iseo_31.png" style="max-width: 100%;">
 			</div>
 		</div>
 	</div>
@@ -20,19 +20,15 @@ use yii\helpers\Url;
 			<div >
 				<div style="padding: 15px 0px 50px 0px;">
 					<div class="row justify-content-center">
-					    <div class="col-6">
+					    <div class="col-sm-12 col-md-6">
 					      	<div class="homepage-seo-box-img">
 								<img src="<?php echo Url::base(true); ?>/img/Pic_iseo_35.png">
 							</div>
 					    </div>
-					    <div class="col-4">
-					      	<div class="homepage-seo-box-text"><b style="font-size: 20px;">SEO</b> หรือ Search Engine Optimization คือหน่ึงในกระบวนการบริหารจัดการเวบ็ ไซตท์ ัง้ในสว่ นของ On-page และ Off-page รวมตลอดจนถึงองคป์ ระกอบอ่ืน ๆ ท่ีเก่ียวขอ้ งกับเวบ็ ไซต์เชน่ Domain, Security</div>
-							<div class="homepage-seo-box-text">เพ่ือทาํ ให้คียเ์วริ์ดท่ีสาํ คัญตอ่ ธุรกิจของเรา สามารถปรากฎอยูใ่ นหน้าแรกของผลการคน้ หาหรือ Search engine page
-							result (SERP) ในอันดับท่ีดีเชน่ 1, 2 หรือ 3 เพ่ือทาํ ให้ลูกคา้ท่ีคน้ หาคาํ นัน้ ๆ กดเขา้มาท่ีเวบ็ ไซตข์ องเรา แทนท่ีจะไปท่ี
-							เวบ็ ของคูแข่ง</div>
-							<div class="homepage-seo-box-text">การทาํ SEO นัน้ เป็นการทาํ การตลาดท่ีสามารถเจาะหรือเขา้ถึงกลุม่ เป้าหมายท่ีมองหาสนิ คา้และบริการของ
-							เราผา่ นการพิมพใ์ น search bar บน search engine เชน่ Google.co.th ซ่ึงเป็นการตลาดท่ีมีความแมน่ ยาํ อีกทัง้ยัง
-							มีประสทิ ธิภาพในการเขา้ถึงลูกคา้ซ่ึงสามารถชว่ ยให้ธุรกิจของคุณประสบความสาํ เร็จเป็นท่ีรู้จักมากยงิ่ ข้ึนบนโลกออนไลน์</div>
+					    <div class="col-sm-12 col-md-4">
+					      	<div class="homepage-seo-box-text"><b style="font-size: 20px;">SEO</b> หรือ Search Engine Optimization คือหนึ่งในกระบวนการบริหารจัดการเว็บไซต์ทั้งในส่วนของ On-page และ Off-page รวมตลอดจนถึงองค์ประกอบอื่น ๆ ที่เกี่ยวข้องกับเว็บไซต์ เช่น Domain, Security</div>
+							<div class="homepage-seo-box-text">เพื่อทำให้คีย์เวิร์ดที่สำคัญต่อธุรกิจของเรา สามารถปรากฎอยู่ในหน้าแรกของผลการค้นหาหรือ Search engine page result (SERP) ในอันดับที่ดีเช่น 1, 2 หรือ 3 เพื่อทำให้ลูกค้าที่ค้นหาคำนั้น ๆ กดเข้ามาที่เว็บไซต์ของเรา แทนที่จะไปที่เว็บของคู่แข่ง</div>
+							<div class="homepage-seo-box-text">การทำ SEO นั้นเป็นการทำการตลาดที่สามารถเจาะหรือเข้าถึงกลุ่มเป้าหมายที่มองหาสินค้าและบริการของเราผ่านการพิมพ์ใน search bar บน search engine เช่น Google.co.th ซึ่งเป็นการตลาดที่มีความแม่นยำ อีกทั้งยังมีประสิทธิภาพในการเข้าถึงลูกค้าซึ่งสามารถช่วยให้ธุรกิจของคุณประสบความสำเร็จเป็นที่รู้จักมากยิ่งขึ้นบนโลกออนไลน์</div>
 					    </div>
 				  	</div>
 				</div>

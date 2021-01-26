@@ -19,7 +19,7 @@ AppAsset::register($this);
 <?= $this->render('_seo'); ?>
 <?= $this->render('_question'); ?>
 <?= $this->render('_video'); ?>
-<?= $this->render('_form'); ?>
+<?= $this->render('_form',['FormContact'=>$FormContact]); ?>
 
 <?php
 $script = <<<JS
