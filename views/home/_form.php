@@ -52,8 +52,8 @@ $form = ActiveForm::begin([
           <?= $form->field($FormContact, '_line_id')->textInput(['class' => 'form-control form-control-sm','id'=>'_line_id'])?>
         </div>
         <div class="form-group-sm" style="margin-bottom: 10px;">
-          <label>เว็บไซต์ www. <span class="field_required">*</span> :</label>
-          <?= $form->field($FormContact, '_website')->textInput(['class' => 'form-control form-control-sm','id'=>'_website','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุเว็บไซต์ www',])?>
+          <label>เว็บไซต์ <span class="field_required">*</span> :</label>
+          <?= $form->field($FormContact, '_website')->textInput(['class' => 'form-control form-control-sm','id'=>'_website','required'=> true,'data-msg'=>'คุณยังไม่ได้ระบุเว็บไซต์',])?>
         </div>
         <div class="form-group-sm" style="margin-bottom: 10px;">
           <label>คีย์เวิร์ดที่ต้องการทำ SEO <span class="field_required">*</span> :</label>

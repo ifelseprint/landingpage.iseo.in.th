@@ -68,7 +68,7 @@ use yii\helpers\Url;
 								<img src="<?php echo Url::base(true); ?>/img/icon_25.png">
 							</div>
 							<div class="homepage-process-box-list-text">
-								<p>รักษาอันดับจามสัญญา</p>
+								<p>รักษาอันดับตามสัญญา</p>
 							</div>
 						</div>
 						<div class="col-md-3 desktop homepage-process-box-list-left">
